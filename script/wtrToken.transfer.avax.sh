@@ -8,8 +8,8 @@ if [ "$#" -eq 0 ]; then
     echo "error"
     exit 1
 elif [ "$#" -eq 1 ]; then
-    # cast send $CONTRACT_WTRTOKEN "approve(address, uint256)(bool)" $CONTRACT_AIRDROP 300 --rpc-url $RPC_URL_LOCAL --private-key $PK_MINT
-    cast send $CONTRACT_WTRTOKEN "transfer(address, uint256)()" $1 1 --rpc-url $RPC_URL_LOCAL --private-key $PK_ACC
+    # cast send $CONTRACT_WTRTOKEN "transfer(address, uint256)()" $1 1 --rpc-url $RPC_URL_AVAX --trezor
+    cast send $CONTRACT_WTRTOKEN "transfer(address, uint256)()" $1 1 --rpc-url $RPC_URL_AVAX --private-key $PK_ACC
 elif [ "$#" -eq 2 ]; then
     echo "error"
     exit 1
